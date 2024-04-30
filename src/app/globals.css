@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "clash-display";
+  src: url("../../public/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #330864;
+  border: 2px solid #111;
+  border-radius: 100vmax;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #400385;
+  cursor: pointer;
+}
+@media screen and (max-width: 320px) {
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(51, 8, 100, 0.5);
+    width: 0px;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font {
+    font-family: "clash-display", sans-serif;
+  }
+  .bg-custom-color {
+    background-color: rgba(21, 14, 40, 1);
+  }
+  .bg-custom-color2 {
+    background-color: rgb(16, 9, 34);
+  }
+  .primary-color {
+    background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  }
+  .text-color-1 {
+    color: rgba(144, 58, 255, 1);
+  }
+  .text-color-2 {
+    color: rgba(212, 52, 254, 1);
+  }
+  .bg-custom-color2 {
+    background-color: rgb(16, 9, 34);
+  }
+  .blur {
+    filter: blur(8px); /* Adjust the blur intensity as needed */
+  }
+  /* Custom gradient border class */
+  .gradient-border {
+    border-image: linear-gradient(to bottom, #ff26b9, #903aff);
+    border-image-slice: 1;
+  }
+}
+body {
+  background-color: rgba(21, 14, 40, 1);
+  color: white;
+  overflow-x: hidden;
+}
